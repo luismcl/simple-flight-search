@@ -2,15 +2,15 @@ package com.luismiguelcisneros.sfs.domain;
 
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class FlightsTest {
 
 
+    private final String cvsLine = "CPH,FRA,IB2818,186";
     @Test
-    public void shouldBuildANewFligthFromArray(){
-
-        String cvsLine = "CPH,FRA,IB2818,186";
+    public void shouldBuildANewFlightFromArray() {
 
         //Expectations
         Flight flight = new Flight(cvsLine.split(","));

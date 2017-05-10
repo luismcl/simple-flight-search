@@ -33,4 +33,6 @@ public class Flight {
     public String getAirline() {
         return code.substring(0, 2);
     }
+
+
 }

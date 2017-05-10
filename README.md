@@ -96,25 +96,12 @@ The goal is to provide us with a full understanding of your coding style and ski
 | IATA code | city       |
 |-----------|------------|
 | MAD       | Madrid     |
-| BCN       | Barcelona  |
-| LHR       | London     |
-| CDG       | Paris      |
-| FRA       | Frakfurt   |
-| IST       | Istanbul   |
-| AMS       | Amsterdam  |
-| FCO       | Rome       |
-| CPH       | Copenhagen |
 
 ### Airlines with infant prices
 | IATA code | name             | infant price |
 |-----------|------------------|--------------|
 | IB        | Iberia           | 10 €         |
-| BA        | British Airways  | 15 €         |
-| LH        | Lufthansa        | 7 €          |
-| FR        | Ryanair          | 20 €         |
-| VY        | Vueling          | 10 €         |
-| TK        | Turkish Airlines | 5 €          |
-| U2        | Easyjet          | 19.90 €      |
+
 
 ### Flights
 
