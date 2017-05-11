@@ -1,7 +1,5 @@
 package com.luismiguelcisneros.sfs.dao;
 
-import com.luismiguelcisneros.sfs.domain.Flight;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;

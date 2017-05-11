@@ -15,15 +15,15 @@ public class Airport {
         return iataCode;
     }
 
-    public void setIataCode(String iataCode) {
-        this.iataCode = iataCode;
-    }
-
     public String getCity() {
         return city;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    @Override
+    public String toString() {
+        return "Airport{" +
+                "iataCode='" + iataCode + '\'' +
+                ", city='" + city + '\'' +
+                '}';
     }
 }

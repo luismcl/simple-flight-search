@@ -45,4 +45,12 @@ public class FlightResult {
         bd = bd.setScale(2, RoundingMode.HALF_UP);
         return bd.doubleValue();
     }
+
+    @Override
+    public String toString() {
+        return "FlightResult{" +
+                "flightCode='" + flightCode + '\'' +
+                ", totalPrice=" + totalPrice +
+                '}';
+    }
 }

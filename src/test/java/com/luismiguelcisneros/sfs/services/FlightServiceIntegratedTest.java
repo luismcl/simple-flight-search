@@ -4,13 +4,11 @@ package com.luismiguelcisneros.sfs.services;
 import com.luismiguelcisneros.sfs.dao.AirlinesDAO;
 import com.luismiguelcisneros.sfs.dao.AirportsDAO;
 import com.luismiguelcisneros.sfs.dao.FlightsDAO;
-import com.luismiguelcisneros.sfs.domain.Flight;
 import com.luismiguelcisneros.sfs.domain.FlightRequest;
 import com.luismiguelcisneros.sfs.domain.FlightResult;
 import com.luismiguelcisneros.sfs.exceptions.CityNotFoundException;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -36,10 +34,11 @@ public class FlightServiceIntegratedTest {
         flightService = new FlightService(airlinesDAO, airportsDAO, flightsDAO);
     }
 
-
+    /**
+     * 1 adult, 31 days to the departure date, flying AMS -> FRA
+     */
     @Test
-    //1 adult, 31 days to the departure date, flying AMS -> FRA
-    public void test1() throws CityNotFoundException {
+    public void oneAdultTest() throws CityNotFoundException {
 
         FlightRequest request = new FlightRequest();
         request.setAdults(1);
@@ -54,9 +53,11 @@ public class FlightServiceIntegratedTest {
         Assert.assertTrue(result.contains(new FlightResult("LH5909", 90.4)));
     }
 
+    /**
+     * 2 adults, 1 child, 1 infant, 15 days to the departure date, flying LHR -> IST
+     */
     @Test
-    //2 adults, 1 child, 1 infant, 15 days to the departure date, flying LHR -> IST
-    public void test2() throws CityNotFoundException {
+    public void adultChildAndInfantTest() throws CityNotFoundException {
 
         FlightRequest request = new FlightRequest();
         request.setAdults(2);
@@ -72,9 +73,11 @@ public class FlightServiceIntegratedTest {
         Assert.assertTrue(result.contains(new FlightResult("LH1085", 481.19)));
     }
 
-    //1 adult, 2 children, 2 days to the departure date, flying BCN -> MAD
+    /**
+     * 1 adult, 2 children, 2 days to the departure date, flying BCN -> MAD
+     */
     @Test
-    public void test3() throws CityNotFoundException {
+    public void closeDateTest() throws CityNotFoundException {
 
         FlightRequest request = new FlightRequest();
         request.setAdults(1);
@@ -89,9 +92,13 @@ public class FlightServiceIntegratedTest {
         Assert.assertTrue(result.contains(new FlightResult("LH5496", 1028.43)));
     }
 
-    //CDG -> FRA
+    /**
+     *
+     * CDG -> FRA
+     *
+     */
     @Test
-    public void test4() throws CityNotFoundException {
+    public void noFlightTest() throws CityNotFoundException {
 
         FlightRequest request = new FlightRequest();
         request.setAdults(1);

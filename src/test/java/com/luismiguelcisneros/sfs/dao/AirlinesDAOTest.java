@@ -4,9 +4,7 @@ import com.luismiguelcisneros.sfs.domain.Airline;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Optional;
-
 
 import static org.junit.Assert.*;
 

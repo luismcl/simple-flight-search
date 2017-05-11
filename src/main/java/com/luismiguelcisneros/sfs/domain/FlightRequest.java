@@ -13,7 +13,7 @@ public class FlightRequest {
     private String originCity;
     private String destinyCity;
     private LocalDate departureDate;
-    private Map<PassengerType, Integer> passagers  = new HashMap<>();
+    private Map<PassengerType, Integer> passagers = new HashMap<>();
 
     public String getOriginCity() {
         return originCity;
@@ -65,5 +65,15 @@ public class FlightRequest {
 
     public Map<PassengerType, Integer> getPassagers() {
         return Collections.unmodifiableMap(passagers);
+    }
+
+    @Override
+    public String toString() {
+        return "FlightRequest{" +
+                "originCity='" + originCity + '\'' +
+                ", destinyCity='" + destinyCity + '\'' +
+                ", departureDate=" + departureDate +
+                ", passagers=" + passagers +
+                '}';
     }
 }

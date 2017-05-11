@@ -16,23 +16,20 @@ public class Airline {
         return IATACode;
     }
 
-    public void setIATACode(String IATACode) {
-        this.IATACode = IATACode;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public Double getInfantPrice() {
         return infantPrice;
     }
 
-    public void setInfantPrice(Double infantPrice) {
-        this.infantPrice = infantPrice;
+    @Override
+    public String toString() {
+        return "Airline{" +
+                "IATACode='" + IATACode + '\'' +
+                ", name='" + name + '\'' +
+                ", infantPrice=" + infantPrice +
+                '}';
     }
 }

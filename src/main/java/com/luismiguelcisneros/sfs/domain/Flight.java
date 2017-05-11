@@ -34,5 +34,13 @@ public class Flight {
         return code.substring(0, 2);
     }
 
-
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "origin='" + origin + '\'' +
+                ", destination='" + destination + '\'' +
+                ", code='" + code + '\'' +
+                ", basePrice=" + basePrice +
+                '}';
+    }
 }
